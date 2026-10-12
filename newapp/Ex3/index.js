@@ -6,7 +6,9 @@ const calculatorRoutes =
 require('./routes/calculatorRoutes');
 
 
+
 app.use('/calculator', calculatorRoutes);
+app.use('/', express.static('public'))
 app.get('/', (req, res) => {
 res.send('Hello World!')
 })
